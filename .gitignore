@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Abp.AppFactory.SendGrid/v15
+/Abp.AppFactory.SendGrid/bin/Debug/netstandard2.0
+/Abp.AppFactory.SendGrid/obj
