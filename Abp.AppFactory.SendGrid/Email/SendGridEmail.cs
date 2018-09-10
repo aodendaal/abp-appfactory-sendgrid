@@ -1,9 +1,9 @@
 ﻿using Abp.AppFactory.Interfaces;
 using SendGrid.Helpers.Mail;
 
-namespace Abp.AppFactory
+namespace Abp.AppFactory.SendGrid.Email
 {
-    public class Email : IEmail
+    public class SendGridEmail : ISendGridEmail
     {
         public string SenderEmailAddress { get;  set; }
         public string SenderName { get; set; }
@@ -12,12 +12,11 @@ namespace Abp.AppFactory
         public string BodyHtmlContent { get; set; }
         public string RecepientEmailAddress { get; set; }
         public string RecepientName { get; set; }
-
     }
 
     internal static class EmailExtentions
     {
-        internal static SendGridMessage ToMessage(this Email email)
+        internal static SendGridMessage ToMessage(this SendGridEmail email)
         {
             var message = new SendGridMessage()
             {

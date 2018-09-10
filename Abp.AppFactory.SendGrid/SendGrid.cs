@@ -1,5 +1,6 @@
 ﻿using Abp.AppFactory.Interfaces;
 using Abp.AppFactory.SendGrid.Configuration;
+using Abp.AppFactory.SendGrid.Email;
 using SendGrid;
 using System.Threading.Tasks;
 
@@ -14,9 +15,9 @@ namespace Abp.AppFactory.SendGrid
             Client = new SendGridClient(config.SendGridKey);
         }
 
-        public Task<ISendGridResponse> SendAsync(IEmail email) => SendAsync(email);
+        public Task<ISendGridResponse> SendAsync(ISendGridEmail email) => SendAsync(email);
 
-        public async Task<SendGridResponse> SendAsync(Email email)
+        public async Task<SendGridResponse> SendAsync(Email.SendGridEmail email)
         {
             return new SendGridResponse(await Client.SendEmailAsync(email.ToMessage()));
         }
