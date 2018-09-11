@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Andre Odendaal</Authors>
+    <Company>AppFactory</Company>
+    <Description>SendGrid Module for ASP.NET Boilerplate AppFactory</Description>
+    <PackageLicenseUrl>https://github.com/aodendaal/abp-appfactory-sendgrid/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/aodendaal/abp-appfactory-sendgrid</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/aodendaal/abp-appfactory-sendgrid</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
