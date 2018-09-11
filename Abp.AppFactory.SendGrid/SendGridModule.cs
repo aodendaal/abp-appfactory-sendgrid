@@ -1,4 +1,6 @@
-﻿using Abp.AppFactory.SendGrid.Configuration;
+﻿using Abp.AppFactory.Interfaces;
+using Abp.AppFactory.SendGrid.Configuration;
+using Abp.Dependency;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Microsoft.AspNetCore.Hosting;
@@ -27,6 +29,7 @@ namespace Abp.AppFactory.SendGrid
             _appConfiguration = builder.Build();
 
             Configuration.Modules.SendGridConfiguration().SendGridKey = _appConfiguration["SendGrid:Key"];
+            IocManager.Register<ISendGrid, SendGrid>(DependencyLifeStyle.Transient);
         }
 
         public override void Initialize()

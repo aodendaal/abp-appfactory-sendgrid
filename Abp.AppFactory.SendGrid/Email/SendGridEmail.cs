@@ -16,7 +16,7 @@ namespace Abp.AppFactory.SendGrid.Email
 
     internal static class EmailExtentions
     {
-        internal static SendGridMessage ToMessage(this SendGridEmail email)
+        internal static SendGridMessage ToMessage(this ISendGridEmail email)
         {
             var message = new SendGridMessage()
             {

@@ -5,3 +5,5 @@
 /.vs/Abp.AppFactory.SendGrid/v15
 /Abp.AppFactory.SendGrid/bin/Debug/netstandard2.0
 /Abp.AppFactory.SendGrid/obj
+/Abp.AppFactory.SendGrid/bin/Release/netstandard2.0
+/.vs/Abp.AppFactory.SendGrid/DesignTimeBuild

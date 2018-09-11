@@ -6,16 +6,11 @@
 
   <ItemGroup>
     <PackageReference Include="Abp" Version="3.8.1" />
+    <PackageReference Include="Abp.AppFactory.Interfaces" Version="1.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.3" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
     <PackageReference Include="Sendgrid" Version="9.9.0" />
     <PackageReference Include="SendGrid.Events" Version="1.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Abp.AppFactory.Interfaces">
-      <HintPath>..\..\Abp.AppFactory.Interfaces\abp-appfactory-interfaces\Abp.AppFactory.Interfaces\bin\Release\netstandard2.0\Abp.AppFactory.Interfaces.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

@@ -15,11 +15,6 @@ namespace Abp.AppFactory.SendGrid
             Client = new SendGridClient(config.SendGridKey);
         }
 
-        public Task<ISendGridResponse> SendAsync(ISendGridEmail email) => SendAsync(email);
-
-        public async Task<SendGridResponse> SendAsync(Email.SendGridEmail email)
-        {
-            return new SendGridResponse(await Client.SendEmailAsync(email.ToMessage()));
-        }
+        public async Task<ISendGridResponse> SendAsync(ISendGridEmail email) => new SendGridResponse(await Client.SendEmailAsync(email.ToMessage()));
     }
 }
